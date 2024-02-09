@@ -221,6 +221,7 @@ function Menu() {
               }
             })}
           </div>
+          
           <button
           onClick={cerrarSesion}
           className="bg-red-500 hover:bg-red-600 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 ease-in-out focus:outline-none focus:ring focus:ring-red-300 self-center mb-4"
