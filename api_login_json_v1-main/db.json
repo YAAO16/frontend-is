@@ -1,0 +1,22 @@
+{
+    "usuarios":[
+        {
+            "id":1,
+            "username":"admin",
+            "password":"21232f297a57a5a743894a0e4a801fc3",
+            "rol":"Admin"
+        },
+        {
+            "id":2,
+            "username":"cliente",
+            "password":"21232f297a57a5a743894a0e4a801fc3",
+            "rol":"Cliente"
+        },
+        {
+            "id":3,
+            "username":"entrenador",
+            "password":"21232f297a57a5a743894a0e4a801fc3",
+            "rol":"Entrenador"
+        }
+    ]
+}
