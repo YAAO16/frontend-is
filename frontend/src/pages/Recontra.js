@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { VscSignOut } from "react-icons/vsc";
 import { useAppContext } from '../context/Context';
-import loginImg from '../assets/gym.jpg';
+import loginImg from '../assets/rest.jpg';
 
 function Recontra() {
     const [form, setForm] = useState({

@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { loginUser } from '../api/api';
-import loginImg from '../assets/gym.jpg';
+import loginImg from '../assets/rest.jpg';
 import '../css/Login.css';
 import { useAppContext } from '../context/Context';
 
