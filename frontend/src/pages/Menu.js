@@ -166,11 +166,11 @@ function Menu() {
     navigate('/');
   };
   console.log(rol)
-  useEffect(() => {
+  /*useEffect(() => { // tusi quita todas estas validaciones de roles, dejalo limpio
     if (!rol) {
       navigate('/');
     }
-  }, [rol, navigate]);
+  }, [rol, navigate]);*/
 
   const menuItems = generateMenu(rol);
 

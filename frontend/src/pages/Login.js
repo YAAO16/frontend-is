@@ -6,11 +6,11 @@ import loginImg from '../assets/rest.jpg';
 import '../css/Login.css';
 import { useAppContext } from '../context/Context';
 
-const baseUrl = "http://localhost:3001/usuarios";
+const baseUrl = "https://itpsoftback-production.up.railway.app/auth/signin"; // no estas llamando a esta url la tienes en la linea 31
 
 function Login() {
   const [form, setForm] = useState({
-    username: '',
+    email: '',
     password: '',
   });
   const { rol, setRol } = useAppContext(); 
@@ -28,11 +28,13 @@ function Login() {
     e.preventDefault(); 
 
     try {
-      const user = await loginUser(form.username, form.password);
-
+      const user = await loginUser(form.email, form.password);
+      console.log(user)
       if (user) {
-        setRol(user.rol);
+        console.log("entre en el if")
         navigate("/menu");
+        //setRol(user.rol);
+        
       } else {
         alert("El usuario o la contraseña no son correctos");
       }
@@ -60,8 +62,8 @@ function Login() {
  
           <h2 className='text-4xl text-white font-bold text-center'>INICIAR SESIÓN</h2>
           <div className='flex flex-col text-gray-400 py-2'>
-            <label>Usuario</label>
-            <input className='rounded-lg bg-gray-700 mt-2 p-2 focus:border-blue-500 focus:bg-gray-800 focus:outline-none' type="text" name="username" onChange={handleChange} />
+            <label>Email</label>
+            <input className='rounded-lg bg-gray-700 mt-2 p-2 focus:border-blue-500 focus:bg-gray-800 focus:outline-none' type="email" name="email" onChange={handleChange} />
           </div>
           <div className='flex flex-col text-gray-400 py-2'>
             <label>Contraseña</label>
